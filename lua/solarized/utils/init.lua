@@ -7,7 +7,8 @@ function M.default_settings()
 		solarized_diffmode = 'normal',
 		solarized_termtrans = 0,
 		solarized_statusline = 'normal',
-		solarized_italics = 1
+		solarized_italics = 1,
+		solarized_highlight_delimiters = 1
 	}
 
 	for key,val in pairs(settings) do

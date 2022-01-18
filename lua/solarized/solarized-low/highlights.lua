@@ -100,6 +100,12 @@ function M.load_syntax(colors)
 		syntax['WildMenu'] = {fg=colors.base0,bg=colors.base2,style='reverse'}
 	end
 
+	if g.solarized_highlight_delimiters == 1 then
+		syntax['Delimiter'] = syntax['Special']
+	else
+		syntax['Delimiter'] = syntax['Normal']
+	end
+
 	syntax['ColorColumn'] = {fg=colors.base2,bg=colors.base1}
 	syntax['Conceal'] = {fg=colors.blue}
 	syntax['CursorColumn'] = {fg=colors.base2,bg=colors.base1}
@@ -290,7 +296,6 @@ function M.load_syntax(colors)
 	syntax['Conditional'] = syntax['Statement']
 	syntax['Debug'] = syntax['Special']
 	syntax['Define'] = syntax['PreProc']
-	syntax['Delimiter'] = syntax['Special']
 	syntax['Exception'] = syntax['Statement']
 	syntax['Float'] = syntax['Constant']
 	syntax['FloatBorder'] = syntax['VertSplit']

@@ -72,6 +72,14 @@ end
   - If you set statusline option's `normal` and `flat` are the same when using the solarized-flat colorscheme.
   - This option doesn't affect the lua line plugin it has it's own solarized theme.
 
+- **delimiters**
+Highlight delimiters (dots, commas, parentheses, ...) as special characters
+(default: enabled)
+
+```lua
+vim.g.solarized_highlight_delimiters = 1
+```
+
 ## Variants
 
 - **solarized**

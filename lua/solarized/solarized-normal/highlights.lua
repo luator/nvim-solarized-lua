@@ -101,6 +101,12 @@ function M.load_syntax(colors)
 		syntax['Title'] = {fg=colors.orange,style='bold'}
 	end
 
+	if g.solarized_highlight_delimiters == 1 then
+		syntax['Delimiter'] = syntax['Special']
+	else
+		syntax['Delimiter'] = syntax['Normal']
+	end
+
 	syntax['ColorColumn'] = {fg=colors.none,bg=colors.base02}
 	syntax['Conceal'] = {fg=colors.blue}
 	syntax['CursorColumn'] = {fg=colors.none,bg=colors.base02}
@@ -289,7 +295,6 @@ function M.load_syntax(colors)
 	syntax['Conditional'] = syntax['Statement']
 	syntax['Debug'] = syntax['Special']
 	syntax['Define'] = syntax['PreProc']
-	syntax['Delimiter'] = syntax['Special']
 	syntax['Exception'] = syntax['Statement']
 	syntax['Float'] = syntax['Constant']
 	syntax['Function'] = syntax['Identifier']
