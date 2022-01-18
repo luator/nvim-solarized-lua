@@ -405,6 +405,10 @@ function M.load_syntax(colors)
 	syntax['LspDiagnosticsUnderlineInformation'] = syntax['LspDiagnosticsDefaultInformation']
 	syntax['LspDiagnosticsUnderlineHint'] = syntax['LspDiagnosticsDefaultHint']
 
+	syntax['LspReferenceRead'] = {fg=colors.base01,bg=colors.base03,style='reverse'}
+	syntax['LspReferenceText'] = syntax['LspReferenceRead']
+	syntax['LspReferenceWrite'] = {fg=colors.base01,bg=colors.base03,style='reverse,bold'}
+
 	-- Lspsaga
 	syntax['LspSagaFinderSelection'] = syntax['Search']
 	syntax['DiagnosticError'] = syntax['LspDiagnosticsDefaultError']
