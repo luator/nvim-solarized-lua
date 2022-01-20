@@ -23,7 +23,7 @@ function M.load_syntax(colors)
 	syntax['FoldColumn'] = {fg=colors.base0,bg=utils.termtrans(colors.base02)}
 	syntax['Folded'] = {fg=colors.base0,bg=utils.termtrans(colors.base02),guisp=colors.base03,style='bold'}
 	syntax['LineNr'] = {fg=colors.base01,bg=utils.termtrans(colors.base02)}
-	syntax['Terminal'] = syntax['Normal']
+	utils.link('Terminal', 'Normal')
 	syntax['ToolbarButton'] = {fg=colors.base1,bg=utils.termtrans(colors.base02),style='bold'}
 	syntax['ToolbarLine'] = {fg=colors.none,bg=utils.termtrans(colors.base02)}
 
@@ -285,64 +285,64 @@ function M.load_syntax(colors)
 	syntax['pandocMetadata'] = {fg=colors.blue,style='bold'}
 
 
-	syntax['Boolean'] = syntax['Constant']
-	syntax['Character'] = syntax['Constant']
-	syntax['Conditional'] = syntax['Statement']
-	syntax['Debug'] = syntax['Special']
-	syntax['Define'] = syntax['PreProc']
-	syntax['Delimiter'] = syntax['Special']
-	syntax['Exception'] = syntax['Statement']
-	syntax['Float'] = syntax['Constant']
-	syntax['FloatBorder'] = syntax['VertSplit']
-	syntax['Function'] = syntax['Identifier']
-	syntax['Include'] = syntax['PreProc']
-	syntax['Keyword'] = syntax['Statement']
-	syntax['Label'] = syntax['Statement']
-	syntax['Macro'] = syntax['PreProc']
-	syntax['Number'] = syntax['Constant']
-	syntax['Operator'] = syntax['Statement']
-	syntax['PreCondit'] = syntax['PreProc']
-	syntax['QuickFixLine'] = syntax['Search']
-	syntax['Repeat'] = syntax['Statement']
-	syntax['SpecialChar'] = syntax['Special']
-	syntax['SpecialComment'] = syntax['Special']
-	syntax['StatusLineTerm'] = syntax['StatusLine']
-	syntax['StatusLineTermNC'] = syntax['StatusLineNC']
-	syntax['StorageClass'] = syntax['Type']
-	syntax['String'] = syntax['Constant']
-	syntax['Structure'] = syntax['Type']
-	syntax['Tag'] = syntax['Special']
-	syntax['Typedef'] = syntax['Type']
-	syntax['lCursor'] = syntax['Cursor']
-	syntax['vimVar'] = syntax['Identifier']
-	syntax['vimFunc'] = syntax['Function']
-	syntax['vimUserFunc'] = syntax['Function']
-	syntax['helpSpecial'] = syntax['Special']
-	syntax['vimSet'] = syntax['Normal']
-	syntax['vimSetEqual'] = syntax['Normal']
-	syntax['diffAdded'] = syntax['Statement']
-	syntax['diffLine'] = syntax['Identifier']
-	syntax['gitcommitUntracked'] = syntax['gitcommitComment']
-	syntax['gitcommitDiscarded'] = syntax['gitcommitComment']
-	syntax['gitcommitSelected'] = syntax['gitcommitComment']
-	syntax['gitcommitNoBranch'] = syntax['gitcommitBranch']
-	syntax['gitcommitDiscardedArrow'] = syntax['gitcommitDiscardedFile']
-	syntax['gitcommitSelectedArrow'] = syntax['gitcommitSelectedFile']
-	syntax['gitcommitUnmergedArrow'] = syntax['gitcommitUnmergedFile']
-	syntax['jsFuncCall'] = syntax['Function']
-	syntax['rubySymbol'] = syntax['String']
-	syntax['hsImportParams'] = syntax['Delimiter']
-	syntax['hsDelimTypeExport'] = syntax['Delimiter']
-	syntax['hsModuleStartLabel'] = syntax['hsStructure']
-	syntax['hsModuleWhereLabel'] = syntax['hsModuleStartLabel']
-	syntax['pandocVerbatimBlockDeep'] = syntax['pandocVerbatimBlock']
-	syntax['pandocCodeBlock'] = syntax['pandocVerbatimBlock']
-	syntax['pandocCodeBlockDelim'] = syntax['pandocVerbatimBlock']
-	syntax['pandocTableStructureTop'] = syntax['pandocTableStructre']
-	syntax['pandocTableStructureEnd'] = syntax['pandocTableStructre']
-	syntax['pandocEscapedCharacter'] = syntax['pandocEscapePair']
-	syntax['pandocLineBreak'] = syntax['pandocEscapePair']
-	syntax['pandocMetadataTitle'] = syntax['pandocMetadata']
+	utils.link('Boolean', 'Constant')
+	utils.link('Character', 'Constant')
+	utils.link('Conditional', 'Statement')
+	utils.link('Debug', 'Special')
+	utils.link('Define', 'PreProc')
+	utils.link('Delimiter', 'Special')
+	utils.link('Exception', 'Statement')
+	utils.link('Float', 'Constant')
+	utils.link('FloatBorder', 'VertSplit')
+	utils.link('Function', 'Identifier')
+	utils.link('Include', 'PreProc')
+	utils.link('Keyword', 'Statement')
+	utils.link('Label', 'Statement')
+	utils.link('Macro', 'PreProc')
+	utils.link('Number', 'Constant')
+	utils.link('Operator', 'Statement')
+	utils.link('PreCondit', 'PreProc')
+	utils.link('QuickFixLine', 'Search')
+	utils.link('Repeat', 'Statement')
+	utils.link('SpecialChar', 'Special')
+	utils.link('SpecialComment', 'Special')
+	utils.link('StatusLineTerm', 'StatusLine')
+	utils.link('StatusLineTermNC', 'StatusLineNC')
+	utils.link('StorageClass', 'Type')
+	utils.link('String', 'Constant')
+	utils.link('Structure', 'Type')
+	utils.link('Tag', 'Special')
+	utils.link('Typedef', 'Type')
+	utils.link('lCursor', 'Cursor')
+	utils.link('vimVar', 'Identifier')
+	utils.link('vimFunc', 'Function')
+	utils.link('vimUserFunc', 'Function')
+	utils.link('helpSpecial', 'Special')
+	utils.link('vimSet', 'Normal')
+	utils.link('vimSetEqual', 'Normal')
+	utils.link('diffAdded', 'Statement')
+	utils.link('diffLine', 'Identifier')
+	utils.link('gitcommitUntracked', 'gitcommitComment')
+	utils.link('gitcommitDiscarded', 'gitcommitComment')
+	utils.link('gitcommitSelected', 'gitcommitComment')
+	utils.link('gitcommitNoBranch', 'gitcommitBranch')
+	utils.link('gitcommitDiscardedArrow', 'gitcommitDiscardedFile')
+	utils.link('gitcommitSelectedArrow', 'gitcommitSelectedFile')
+	utils.link('gitcommitUnmergedArrow', 'gitcommitUnmergedFile')
+	utils.link('jsFuncCall', 'Function')
+	utils.link('rubySymbol', 'String')
+	utils.link('hsImportParams', 'Delimiter')
+	utils.link('hsDelimTypeExport', 'Delimiter')
+	utils.link('hsModuleStartLabel', 'hsStructure')
+	utils.link('hsModuleWhereLabel', 'hsModuleStartLabel')
+	utils.link('pandocVerbatimBlockDeep', 'pandocVerbatimBlock')
+	utils.link('pandocCodeBlock', 'pandocVerbatimBlock')
+	utils.link('pandocCodeBlockDelim', 'pandocVerbatimBlock')
+	utils.link('pandocTableStructureTop', 'pandocTableStructre')
+	utils.link('pandocTableStructureEnd', 'pandocTableStructre')
+	utils.link('pandocEscapedCharacter', 'pandocEscapePair')
+	utils.link('pandocLineBreak', 'pandocEscapePair')
+	utils.link('pandocMetadataTitle', 'pandocMetadata')
 
 	syntax['DiagnosticError'] = {fg=colors.red,guisp=colors.red,style='none'}
 	syntax['DiagnosticWarning'] = {fg=colors.yellow,guisp=colors.yellow,style='none'}
@@ -353,16 +353,16 @@ function M.load_syntax(colors)
 	syntax['DiagnosticUnderlineInformation'] = {fg=colors.none,guisp=colors.cyan,style='underline'}
 	syntax['DiagnosticUnderlineHint'] = {fg=colors.none,guisp=colors.green,style='underline'}
 
-	syntax['LspSagaFinderSelection'] = syntax['Search']
-	syntax['TargetWord'] = syntax['Title']
+	utils.link('LspSagaFinderSelection', 'Search')
+	utils.link('TargetWord', 'Title')
 
-	syntax['GitSignsAdd'] = syntax['DiffAdd']
-	syntax['GitSignsChange'] = syntax['DiffChange']
-	syntax['GitSignsDelete'] = syntax['DiffDelete']
+	utils.link('GitSignsAdd', 'DiffAdd')
+	utils.link('GitSignsChange', 'DiffChange')
+	utils.link('GitSignsDelete', 'DiffDelete')
 
-	syntax['VGitSignAdd'] = syntax['DiffAdd']
-	syntax['VgitSignChange'] = syntax['DiffChange']
-	syntax['VGitSignRemove'] = syntax['DiffDelete']
+	utils.link('VGitSignAdd', 'DiffAdd')
+	utils.link('VgitSignChange', 'DiffChange')
+	utils.link('VGitSignRemove', 'DiffDelete')
 
 	for group, highlights in pairs(syntax) do
 		utils.highlighter(group, highlights)

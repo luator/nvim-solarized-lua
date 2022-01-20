@@ -22,7 +22,7 @@ function M.load_syntax(colors)
 	syntax['Normal'] = {fg=colors.base1,bg=utils.termtrans(colors.base03)}
 	syntax['FoldColumn'] = {fg=colors.base0,bg=utils.termtrans(colors.base02)}
 	syntax['Folded'] = {fg=colors.base0,bg=utils.termtrans(colors.base02),guisp=colors.base03,style='bold'}
-	syntax['Terminal'] = syntax['Normal']
+	utils.link('Terminal', 'Normal')
 	syntax['ToolbarButton'] = {fg=colors.base1,bg=utils.termtrans(colors.base02),style='bold'}
 	syntax['ToolbarLine'] = {fg=colors.none,bg=utils.termtrans(colors.base02)}
 	syntax['CursorLine'] = {fg=colors.none,bg=utils.termtrans(colors.base02)}
@@ -284,109 +284,109 @@ function M.load_syntax(colors)
 	syntax['pandocMetadataKey'] = {fg=colors.blue}
 	syntax['pandocMetadata'] = {fg=colors.blue,style='bold'}
 
-	syntax['Boolean'] = syntax['Constant']
-	syntax['Character'] = syntax['Constant']
-	syntax['Conditional'] = syntax['Statement']
-	syntax['Debug'] = syntax['Special']
-	syntax['Define'] = syntax['PreProc']
-	syntax['Delimiter'] = syntax['Special']
-	syntax['Exception'] = syntax['Statement']
-	syntax['Float'] = syntax['Constant']
-	syntax['Function'] = syntax['Identifier']
-	syntax['Include'] = syntax['PreProc']
-	syntax['Keyword'] = syntax['Statement']
-	syntax['Label'] = syntax['Statement']
-	syntax['Macro'] = syntax['PreProc']
-	syntax['Number'] = syntax['Constant']
-	syntax['Operator'] = syntax['Statement']
-	syntax['PreCondit'] = syntax['PreProc']
-	syntax['QuickFixLine'] = syntax['Search']
-	syntax['Repeat'] = syntax['Statement']
-	syntax['SpecialChar'] = syntax['Special']
-	syntax['SpecialComment'] = syntax['Special']
-	syntax['StatusLineTerm'] = syntax['StatusLine']
-	syntax['StatusLineTermNC'] = syntax['StatusLineNC']
-	syntax['StorageClass'] = syntax['Type']
-	syntax['String'] = syntax['Constant']
-	syntax['Structure'] = syntax['Type']
-	syntax['Tag'] = syntax['Special']
-	syntax['Typedef'] = syntax['Type']
-	syntax['lCursor'] = syntax['Cursor']
-	syntax['vimVar'] = syntax['Identifier']
-	syntax['vimFunc'] = syntax['Function']
-	syntax['vimUserFunc'] = syntax['Function']
-	syntax['helpSpecial'] = syntax['Special']
-	syntax['vimSet'] = syntax['Normal']
-	syntax['vimSetEqual'] = syntax['Normal']
-	syntax['diffAdded'] = syntax['Statement']
-	syntax['diffLine'] = syntax['Identifier']
-	syntax['gitcommitUntracked'] = syntax['gitcommitComment']
-	syntax['gitcommitDiscarded'] = syntax['gitcommitComment']
-	syntax['gitcommitSelected'] = syntax['gitcommitComment']
-	syntax['gitcommitNoBranch'] = syntax['gitcommitBranch']
-	syntax['gitcommitDiscardedArrow'] = syntax['gitcommitDiscardedFile']
-	syntax['gitcommitSelectedArrow'] = syntax['gitcommitSelectedFile']
-	syntax['gitcommitUnmergedArrow'] = syntax['gitcommitUnmergedFile']
-	syntax['jsFuncCall'] = syntax['Function']
-	syntax['rubySymbol'] = syntax['String']
-	syntax['hsImportParams'] = syntax['Delimiter']
-	syntax['hsDelimTypeExport'] = syntax['Delimiter']
-	syntax['hsModuleStartLabel'] = syntax['hsStructure']
-	syntax['hsModuleWhereLabel'] = syntax['hsModuleStartLabel']
-	syntax['pandocVerbatimBlockDeep'] = syntax['pandocVerbatimBlock']
-	syntax['pandocCodeBlock'] = syntax['pandocVerbatimBlock']
-	syntax['pandocCodeBlockDelim'] = syntax['pandocVerbatimBlock']
-	syntax['pandocTableStructureTop'] = syntax['pandocTableStructre']
-	syntax['pandocTableStructureEnd'] = syntax['pandocTableStructre']
-	syntax['pandocEscapedCharacter'] = syntax['pandocEscapePair']
-	syntax['pandocLineBreak'] = syntax['pandocEscapePair']
-	syntax['pandocMetadataTitle'] = syntax['pandocMetadata']
+	utils.link('Boolean', 'Constant')
+	utils.link('Character', 'Constant')
+	utils.link('Conditional', 'Statement')
+	utils.link('Debug', 'Special')
+	utils.link('Define', 'PreProc')
+	utils.link('Delimiter', 'Special')
+	utils.link('Exception', 'Statement')
+	utils.link('Float', 'Constant')
+	utils.link('Function', 'Identifier')
+	utils.link('Include', 'PreProc')
+	utils.link('Keyword', 'Statement')
+	utils.link('Label', 'Statement')
+	utils.link('Macro', 'PreProc')
+	utils.link('Number', 'Constant')
+	utils.link('Operator', 'Statement')
+	utils.link('PreCondit', 'PreProc')
+	utils.link('QuickFixLine', 'Search')
+	utils.link('Repeat', 'Statement')
+	utils.link('SpecialChar', 'Special')
+	utils.link('SpecialComment', 'Special')
+	utils.link('StatusLineTerm', 'StatusLine')
+	utils.link('StatusLineTermNC', 'StatusLineNC')
+	utils.link('StorageClass', 'Type')
+	utils.link('String', 'Constant')
+	utils.link('Structure', 'Type')
+	utils.link('Tag', 'Special')
+	utils.link('Typedef', 'Type')
+	utils.link('lCursor', 'Cursor')
+	utils.link('vimVar', 'Identifier')
+	utils.link('vimFunc', 'Function')
+	utils.link('vimUserFunc', 'Function')
+	utils.link('helpSpecial', 'Special')
+	utils.link('vimSet', 'Normal')
+	utils.link('vimSetEqual', 'Normal')
+	utils.link('diffAdded', 'Statement')
+	utils.link('diffLine', 'Identifier')
+	utils.link('gitcommitUntracked', 'gitcommitComment')
+	utils.link('gitcommitDiscarded', 'gitcommitComment')
+	utils.link('gitcommitSelected', 'gitcommitComment')
+	utils.link('gitcommitNoBranch', 'gitcommitBranch')
+	utils.link('gitcommitDiscardedArrow', 'gitcommitDiscardedFile')
+	utils.link('gitcommitSelectedArrow', 'gitcommitSelectedFile')
+	utils.link('gitcommitUnmergedArrow', 'gitcommitUnmergedFile')
+	utils.link('jsFuncCall', 'Function')
+	utils.link('rubySymbol', 'String')
+	utils.link('hsImportParams', 'Delimiter')
+	utils.link('hsDelimTypeExport', 'Delimiter')
+	utils.link('hsModuleStartLabel', 'hsStructure')
+	utils.link('hsModuleWhereLabel', 'hsModuleStartLabel')
+	utils.link('pandocVerbatimBlockDeep', 'pandocVerbatimBlock')
+	utils.link('pandocCodeBlock', 'pandocVerbatimBlock')
+	utils.link('pandocCodeBlockDelim', 'pandocVerbatimBlock')
+	utils.link('pandocTableStructureTop', 'pandocTableStructre')
+	utils.link('pandocTableStructureEnd', 'pandocTableStructre')
+	utils.link('pandocEscapedCharacter', 'pandocEscapePair')
+	utils.link('pandocLineBreak', 'pandocEscapePair')
+	utils.link('pandocMetadataTitle', 'pandocMetadata')
 
 	-- TreeSitter
-	-- syntax['TSAnnotation'] = syntax['']
-	syntax['TSBoolean'] = syntax['Constant']
-	syntax['TSCharacter'] = syntax['Constant']
-	syntax['TSComment'] = syntax['Comment']
-	syntax['TSConditional'] = syntax['Conditional']
-	syntax['TSConstant'] = syntax['Constant']
-	syntax['TSConstBuiltin'] = syntax['Constant']
-	syntax['TSConstMacro'] = syntax['Constant']
+	-- utils.link('TSAnnotation', '')
+	utils.link('TSBoolean', 'Constant')
+	utils.link('TSCharacter', 'Constant')
+	utils.link('TSComment', 'Comment')
+	utils.link('TSConditional', 'Conditional')
+	utils.link('TSConstant', 'Constant')
+	utils.link('TSConstBuiltin', 'Constant')
+	utils.link('TSConstMacro', 'Constant')
 	syntax['TSError'] = {fg=colors.red}
-	syntax['TSException'] = syntax['Exception']
-	syntax['TSField'] = syntax['Identifier']
-	syntax['TSFloat'] = syntax['Float']
-	syntax['TSFunction'] = syntax['Function']
-	syntax['TSFuncBuiltin'] = syntax['Function']
-	syntax['TSFuncMacro'] = syntax['Function']
-	syntax['TSInclude'] = syntax['Include']
-	syntax['TSKeyword'] = syntax['Keyword']
-	syntax['TSLabel'] = syntax['Label']
-	syntax['TSMethod'] = syntax['Function']
-	syntax['TSNamespace'] = syntax['Identifier']
-	syntax['TSNumber'] = syntax['Constant']
-	syntax['TSOperator'] = syntax['Operator']
-	syntax['TSParameterReference'] = syntax['Identifier']
-	syntax['TSProperty'] = syntax['TSField']
-	syntax['TSPunctDelimiter'] = syntax['Delimiter']
-	syntax['TSPunctBracket'] = syntax['Delimiter']
-	syntax['TSPunctSpecial'] = syntax['Special']
-	syntax['TSRepeat'] = syntax['Repeat']
-	syntax['TSString'] = syntax['Constant']
-	syntax['TSStringRegex'] = syntax['Constant']
-	syntax['TSStringEscape'] = syntax['Constant']
+	utils.link('TSException', 'Exception')
+	utils.link('TSField', 'Identifier')
+	utils.link('TSFloat', 'Float')
+	utils.link('TSFunction', 'Function')
+	utils.link('TSFuncBuiltin', 'Function')
+	utils.link('TSFuncMacro', 'Function')
+	utils.link('TSInclude', 'Include')
+	utils.link('TSKeyword', 'Keyword')
+	utils.link('TSLabel', 'Label')
+	utils.link('TSMethod', 'Function')
+	utils.link('TSNamespace', 'Identifier')
+	utils.link('TSNumber', 'Constant')
+	utils.link('TSOperator', 'Operator')
+	utils.link('TSParameterReference', 'Identifier')
+	utils.link('TSProperty', 'TSField')
+	utils.link('TSPunctDelimiter', 'Delimiter')
+	utils.link('TSPunctBracket', 'Delimiter')
+	utils.link('TSPunctSpecial', 'Special')
+	utils.link('TSRepeat', 'Repeat')
+	utils.link('TSString', 'Constant')
+	utils.link('TSStringRegex', 'Constant')
+	utils.link('TSStringEscape', 'Constant')
 	syntax['TSStrong'] = {fg=colors.base1,bg=colors.base03,style='bold'}
-	syntax['TSConstructor'] = syntax['Function']
-	syntax['TSKeywordFunction'] = syntax['Identifier']
-	syntax['TSLiteral'] = syntax['Normal']
-	syntax['TSParameter'] = syntax['Identifier']
+	utils.link('TSConstructor', 'Function')
+	utils.link('TSKeywordFunction', 'Identifier')
+	utils.link('TSLiteral', 'Normal')
+	utils.link('TSParameter', 'Identifier')
 	syntax['TSVariable'] = {fg=colors.base1}
-	syntax['TSVariableBuiltin'] = syntax['Identifier']
-	syntax['TSTag'] = syntax['Special']
-	syntax['TSTagDelimiter'] = syntax['Delimiter']
-	syntax['TSTitle'] = syntax['Title']
-	syntax['TSType'] = syntax['Type']
-	syntax['TSTypeBuiltin'] = syntax['Type']
-	-- syntax['TSEmphasis'] = syntax['']
+	utils.link('TSVariableBuiltin', 'Identifier')
+	utils.link('TSTag', 'Special')
+	utils.link('TSTagDelimiter', 'Delimiter')
+	utils.link('TSTitle', 'Title')
+	utils.link('TSType', 'Type')
+	utils.link('TSTypeBuiltin', 'Type')
+	-- utils.link('TSEmphasis', '')
 
 	syntax['DiagnosticError'] = {fg=colors.red,guisp=colors.red,style='none'}
 	syntax['DiagnosticWarning'] = {fg=colors.yellow,guisp=colors.yellow,style='none'}
@@ -398,16 +398,16 @@ function M.load_syntax(colors)
 	syntax['DiagnosticUnderlineHint'] = {fg=colors.none,guisp=colors.green,style='underline'}
 
 	-- Lspsaga
-	syntax['LspSagaFinderSelection'] = syntax['Search']
-	syntax['TargetWord'] = syntax['Title']
+	utils.link('LspSagaFinderSelection', 'Search')
+	utils.link('TargetWord', 'Title')
 
-	syntax['GitSignsAdd'] = syntax['DiffAdd']
-	syntax['GitSignsChange'] = syntax['DiffChange']
-	syntax['GitSignsDelete'] = syntax['DiffDelete']
+	utils.link('GitSignsAdd', 'DiffAdd')
+	utils.link('GitSignsChange', 'DiffChange')
+	utils.link('GitSignsDelete', 'DiffDelete')
 
-	syntax['VGitSignAdd'] = syntax['DiffAdd']
-	syntax['VgitSignChange'] = syntax['DiffChange']
-	syntax['VGitSignRemove'] = syntax['DiffDelete']
+	utils.link('VGitSignAdd', 'DiffAdd')
+	utils.link('VgitSignChange', 'DiffChange')
+	utils.link('VGitSignRemove', 'DiffDelete')
 
 	for group, highlights in pairs(syntax) do
 		utils.highlighter(group, highlights)

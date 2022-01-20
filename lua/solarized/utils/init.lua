@@ -34,6 +34,11 @@ function M.highlighter(group, colors)
 	))
 end
 
+function M.link(from_group, to_group)
+    -- link highlight groups
+	vim.cmd(string.format('highlight link %s %s', from_group, to_group))
+end
+
 -- italics and termtrans functions
 
 function M.italics()
